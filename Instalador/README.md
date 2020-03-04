@@ -1,1 +1,1 @@
-#Carpeta con la solucion compilada
+#Carpeta con el programa.
