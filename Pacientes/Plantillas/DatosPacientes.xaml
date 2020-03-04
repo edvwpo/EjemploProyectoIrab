@@ -1,0 +1,70 @@
+﻿<Window x:Class="Pacientes.Plantillas.DatosPacientes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pacientes.Plantillas"
+        mc:Ignorable="d"
+        Title="DatosPacientes" Height="800" Width="800" SizeToContent="WidthAndHeight" ResizeMode="NoResize" WindowStyle="SingleBorderWindow">
+    <Grid>
+        <Grid x:Name="Paciente" Margin="0,0,0,575">
+            <GroupBox Header="Paciente" Margin="0,0,0,10"/>
+            <Label x:Name="NombreLb" Content="Nombre" Height="30" Width="80" Margin="18,42,702,137"/>
+            <TextBox x:Name="NombreTxt" Height="20" Margin="88,42,418,137" Background="WhiteSmoke"/>
+            <Label x:Name="ApellidoLb" Content="Apellido" Height="30" Margin="406,42,323,137"/>
+            <TextBox x:Name="ApellidoTxt" Height="20" Margin="468,42,38,137" Background="WhiteSmoke"/>
+            <Label x:Name="DniLb" Content="DNI" Height="30" Margin="18,67,711,60"/>
+            <TextBox x:Name="DniTxt" Height="20" Margin="88,67,418,60" Background="WhiteSmoke"/>
+            <Label x:Name="SexoLb" Content="Sexo" Height="30" Margin="408,67,321,60"/>
+            <ComboBox x:Name="SexoCombo" HorizontalAlignment="Left" Margin="468,93,0,0" VerticalAlignment="Top" Width="235" Height="30">
+                <ComboBoxItem Content="Femenino" IsSelected="True"/>
+                <ComboBoxItem Content="Masculino"/>
+            </ComboBox>
+            <Label x:Name="NacimientoLb" Content="Fecha de Nacimiento" Height="30" Width="140" Margin="18,144,642,35"/>
+            <DatePicker x:Name="NacimientoDate" Height="30" Margin="157,144,418,35" DisplayDateEnd="2021-01-01" DisplayDateStart="1990-01-01"/>
+            <Label x:Name="EdadLb" Content="Edad" Height="30" Margin="406,146,323,33"/>
+            <TextBox x:Name="EdadTxt" Height="20" Margin="468,146,38,33" Background="WhiteSmoke"/>
+        </Grid>
+        <Grid x:Name="Madre" Margin="0,209,0,407">
+            <GroupBox Header="Madre/Cuidador" Margin="0,0,0,-11"/>
+            <Label x:Name="NombreMadreLb" Content="Nombre" Height="30" Width="80" Margin="22,35,698,61"/>
+            <TextBox x:Name="NombreMadreTxt" Height="20" Margin="92,35,414,61" Background="WhiteSmoke"/>
+            <Label x:Name="ApellidoMadreLb" Content="Apellido" Height="30" Margin="410,35,319,61"/>
+            <TextBox x:Name="ApellidoMadreTxt" Height="20" Margin="472,35,34,61" Background="WhiteSmoke"/>
+            <Label x:Name="DniMadreLb" Content="DNI" Height="30" Margin="22,86,707,10"/>
+            <TextBox x:Name="DniMadreTxt" Height="20" Margin="92,86,414,10" Background="WhiteSmoke"/>
+
+        </Grid>
+        <Grid x:Name="Contacto" Margin="0,377,0,249">
+            <GroupBox Header="Contacto y Domicilio"/>
+            <Label x:Name="TelefonoLb" Content="Telefono" Height="30" Width="80" Margin="20,42,700,81"/>
+            <TextBox x:Name="TelefonoTxt" Height="20" Margin="90,42,416,81" Background="WhiteSmoke"/>
+            <Label x:Name="CelularLb" Content="Celular" Height="30" Margin="400,42,329,81"/>
+            <TextBox x:Name="CelularTxt" Height="20" Margin="470,42,36,81" Background="WhiteSmoke"/>
+            <Label x:Name="DomicilioLb" Content="Domicilio" Height="30" Margin="20,93,709,30"/>
+            <TextBox x:Name="DomicilioTxt" Height="20" Margin="90,93,416,30" Background="WhiteSmoke"/>
+            <Label x:Name="LocalidadLb" Content="Localidad" Height="30" Margin="400,95,329,28"/>
+            <TextBox x:Name="LocalidadTxt" Height="20" Margin="470,95,36,28" Background="WhiteSmoke"/>
+
+        </Grid>
+        <Grid x:Name="Diagnostico" Margin="0,535,0,89">
+            <GroupBox Header="Internos"/>
+            <Label x:Name="DiagnosticoLb" Content="Diagnostico" Height="30" Width="80" Margin="10,30,710,100"/>
+            <TextBox x:Name="DiagnosticoTxt" Margin="90,33,416,47" Background="WhiteSmoke" VerticalContentAlignment="Top" />
+            <Label x:Name="CamaLb" Content="Cama" Height="30" Width="80" Margin="10,113,710,17"/>
+            <TextBox x:Name="CamaTxt" Margin="90,113,416,17" Background="WhiteSmoke" Height="20" />
+            <Label x:Name="FechaIngresoLb" Content="Fecha de Ingreso" Height="30" Width="140" Margin="400,33,260,97"/>
+            <DatePicker x:Name="IngresoDate" Height="30" Margin="539,33,36,97" DisplayDateEnd="2021-01-01" DisplayDateStart="1990-01-01"/>
+            <Label x:Name="FechaAltaLb" Content="Fecha de Alta" Height="30" Width="140" Margin="400,77,260,53"/>
+            <DatePicker x:Name="AltaDate" Height="30" Margin="539,77,36,53" DisplayDateEnd="2021-01-01" DisplayDateStart="1990-01-01"/>
+        </Grid>
+        <Grid x:Name="Botones" VerticalAlignment="Top" Height="78" Margin="0,706,0,0" RenderTransformOrigin="0.5,0.5">
+
+            <Label x:Name="NumeroLb" Content="Numero de Planilla" Height="30" Margin="10,28,665,20"/>
+            <TextBox x:Name="NumeroTxt" Margin="135,28,371,20" Background="WhiteSmoke" Height="20" />
+            <Button x:Name ="IngresarBtn" Content="Ingresar" HorizontalAlignment="Left" Margin="517,0,0,0" VerticalAlignment="Center" Height="58" Width="112" Click="IngresarBtn_Click"/>
+            <Button x:Name ="CancelarBtn" Content="Cancelar" HorizontalAlignment="Left" Margin="678,0,0,0" VerticalAlignment="Center" Height="58" Width="112" Click="CancelarBtn_Click"/>
+
+        </Grid>
+    </Grid>
+</Window>
